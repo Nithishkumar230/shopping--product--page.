@@ -1,0 +1,134 @@
+.filter-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: nowrap; /* Prevents wrapping to keep in one line */
+  gap: 12px;
+  padding: 12px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow-x: auto; /* Prevents content overflow */
+  white-space: nowrap;
+}
+
+/* Individual filter items */
+.filter-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+/* Input & Dropdown Styling */
+.search-input,
+.category-select,
+.price-range,
+.sort-select {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 180px; /* Ensures uniform size */
+  max-width: 200px;
+}
+
+/* Search Box */
+.search-box {
+  .search-box {
+    flex-grow: 2; /* Increases the size of the search box */
+    min-width: 250px; /* Ensures a minimum width */
+  }
+  
+  .search-input {
+    width: 100%; /* Ensures it takes full width */
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+}
+
+/* Category & Sort Dropdowns */
+.category-select,
+.sort-select {
+  background-color: #f9f9f9;
+  cursor: pointer;
+}
+
+/* Price Box */
+.price-box {
+  display: flex;
+  align-items: center;
+}
+
+.price-label {
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 6px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .filter-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .filter-item {
+    flex: 1;
+    min-width: 140px;
+  }
+
+  .search-input,
+  .category-select,
+  .price-range,
+  .sort-select {
+    width: 150px; /* Adjusts for smaller screens */
+  }
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Responsive grid */
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+.product-image {
+  width: 150px;  /* Fixed width for normal size */
+  height: 150px; /* Fixed height for normal size */
+  object-fit: contain; /* Ensures image is fully visible */
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #ffb300; /* Nice orange color */
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e68900; /* Darker shade on hover */
+}
+
+
