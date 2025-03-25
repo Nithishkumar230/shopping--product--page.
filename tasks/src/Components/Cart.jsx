@@ -60,7 +60,7 @@ const Cart = () => {
     },
   });
 
-  //  Compute total price 
+  //  Compute  total price 
   const totalPrice = cartItems.reduce((sum, item) => sum + item.price, 0);
 
   
